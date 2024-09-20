@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Focus Timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Focus Timer</h1>
+      <div class="timer-buttons">
+        <button class="timer-button" data-duration="2">2 Min</button>
+        <button class="timer-button" data-duration="5">5 Min</button>
+        <button class="timer-button" data-duration="10">10 Min</button>
+        <button class="timer-button" id="custom-timer">Custom</button>
+      </div>
+      <div class="timer-display" id="timer-display">00:00</div>
+    </header>
+    
+    <main>
+      <textarea id="scratchpad" placeholder="Start typing your thoughts here..."></textarea>
+    </main>
+  </div>
+  
+  <!-- Modal for Custom Timer -->
+  <div id="custom-timer-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-modal">&times;</span>
+      <h2>Set Custom Timer</h2>
+      <input type="number" id="custom-duration" min="1" placeholder="Enter minutes">
+      <button id="set-custom-timer">Set Timer</button>
+    </div>
+  </div>
+  
+  <!-- Overlay for Modal -->
+  <div id="modal-overlay" class="overlay"></div>
+  
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
